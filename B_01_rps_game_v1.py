@@ -114,7 +114,10 @@ while rounds_played < num_rounds:
         rounds_heading = f"\n round {rounds_played + 1} of {num_rounds} "
 
     print(rounds_heading)
-    print()
+
+
+    comp_choice = random.choice(rps_list[:-1])
+    print("Computer choice", comp_choice)
 
     user_choice = string_checker("Choose: ", rps_list)
     print("you chose", user_choice)
@@ -122,7 +125,6 @@ while rounds_played < num_rounds:
     if user_choice == "xxx":
         break
 
-    comp_choice = random.choice(rps_list[:-1])
 
     result = rps_compare(user_choice, comp_choice)
     print(f"{user_choice} vs {comp_choice}, {result}")
